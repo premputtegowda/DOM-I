@@ -141,9 +141,9 @@ textContentDiv.forEach(item => {
 
 //stretch goal 2
 
-// const btn = document.querySelector('button');
+const btn = document.querySelector('button');
 
-// btn.addEventListener('click', alertUser);
+btn.addEventListener('click', addContent);
 
 function alertUser(e){
   alert(`You clicked "${e.target.textContent}" menu option`)
@@ -152,3 +152,15 @@ function alertUser(e){
 menu_ItemsNew.forEach( element => {
   element.addEventListener('click',alertUser)
 })
+
+
+function addContent(){
+  const btnContent = document.createElement('p');
+  btnContent.textContent = 'Please head to lambdaschool.com to get started'
+  btnContent.style.fontSize='1.6rem'
+  btnContent.style.color = 'green';
+
+  const ctaText = document.querySelector('.cta-text');
+  ctaText.append(btnContent);
+
+}
