@@ -137,3 +137,18 @@ textContentDiv.forEach(item => {
   item.style.margin = '2px';
   item.style.padding= '5px'
 })
+
+
+//stretch goal 2
+
+// const btn = document.querySelector('button');
+
+// btn.addEventListener('click', alertUser);
+
+function alertUser(e){
+  alert(`You clicked "${e.target.textContent}" menu option`)
+};
+
+menu_ItemsNew.forEach( element => {
+  element.addEventListener('click',alertUser)
+})
