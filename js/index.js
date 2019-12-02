@@ -106,3 +106,34 @@ contactDetails[2].textContent = siteContent["contact"]["email"]
 const footerContent = document.querySelector('footer p');
 
 footerContent.textContent = siteContent["footer"]["copyright"]
+
+
+
+// Add new content to nav
+const navElement = document.querySelector('nav ');
+const before = document.createElement('a');
+const after = document.createElement('a');
+after.href = '#';
+before.href = '#';
+before.textContent = 'Before';
+after.textContent = 'After'
+navElement.prepend(before);
+navElement.append(after);
+
+//update nav color
+const menu_ItemsNew = document.querySelectorAll('nav a');
+menu_ItemsNew.forEach(item => item.style.color = 'green');
+
+
+//stretch goal 1
+
+const header = document.querySelector('header');
+header.style.backgroundColor = 'grey';
+
+const textContentDiv = document.querySelectorAll('div.text-content');
+textContentDiv.forEach(item => {
+  item.style.border = '1px solid black';
+  item.style.borderRadius = '5px';
+  item.style.margin = '2px';
+  item.style.padding= '5px'
+})
